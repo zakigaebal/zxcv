@@ -33,9 +33,11 @@
   </head>
   <body>
     <div id="wrap">
-      <input type="text" size="3" id="num1" />
+      <div class="show-anwser"><span id="ans"></span></div>
+
+      <input type="text" size="3" id="num1" class="intext11" />
       <span id="opr"></span>
-      <input type="text" size="3" id="num2" />
+      <input type="text" size="3" id="num2" class="intext11" />
       <br />
       <button type="button" onclick="fnPlus()">+</button>
       <button type="button" onclick="fnMinus()">-</button>
@@ -43,6 +45,14 @@
       <button type="button" onclick="fnDiv()">/</button>
       <br />
       <span id="res"></span>
+      <!-- text input -->
+      <div class="box2">
+        <input tpye="text" id="intext2" />
+      </div>
+      <!-- button -->
+      <div class="box2">
+        <button class="btn" onclick="Answer()">확인해보기</button>
+      </div>
     </div>
 
     <script>
@@ -100,6 +110,17 @@
           alert("숫자만 입력해주세요");
           res.innerText = "";
           opr.innerText = "";
+        }
+      }
+
+      function Answer() {
+        let user = document.getElementById("intext2").value;
+
+        if (user == Number(res.innerHTML)) {
+          document.getElementById("ans").innerHTML = "맞았습니다!";
+        } else {
+          document.getElementById("ans").innerHTML =
+            "정답은 " + Number(res.innerHTML) + " . 틀렸습니다";
         }
       }
     </script>

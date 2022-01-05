@@ -66,3 +66,8 @@ input.addEventListener("keyup", (event) => {
     Answer();
   }
 });
+
+function re() {
+  var re = document.getElementById("intext2");
+  re.value = null;
+}

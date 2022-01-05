@@ -47,6 +47,12 @@ function fnDiv() {
   num2 = Number(document.querySelector("#num2").value);
   opr.innerText = "/";
   res.innerText = num1 / num2;
+
+  if (isNaN(num1 * num2)) {
+    alert("숫자만 입력해주세요");
+    res.innerText = "";
+    opr.innerText = "";
+  }
 }
 
 function Answer() {
@@ -54,9 +60,11 @@ function Answer() {
 
   if (user == Number(res.innerHTML)) {
     document.getElementById("ans").innerHTML = "맞았습니다!";
+    document.getElementById("ans").style.color = "blue";
   } else {
     document.getElementById("ans").innerHTML =
       "정답은 " + Number(res.innerHTML) + " . 틀렸습니다";
+    document.getElementById("ans").style.color = "red";
   }
 }
 
@@ -68,6 +76,8 @@ input.addEventListener("keyup", (event) => {
 });
 
 function re() {
-  var re = document.getElementById("intext2");
+  const re = document.getElementById("intext2");
+  const re2 = document.getElementById("ans");
   re.value = null;
+  re2.value = null;
 }

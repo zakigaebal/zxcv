@@ -9,6 +9,19 @@
   </head>
   <body>
     <h1>사칙연산 연습</h1>
+
+    <p>숫자를 입력하세요</p>
+    <div id="center">
+      <input type="text" size="3" id="num1" class="intext11" />
+      <span id="opr"></span>
+      <input type="text" size="3" id="num2" class="intext11" />
+    </div>
+
+    <span id="res"></span>
+
+    <!-- text input -->
+    <br />
+
     <p>연산을 선택하세요</p>
     <div id="moem">
       <button class="op" type="button" onclick="fnPlus()">+</button>
@@ -18,24 +31,18 @@
     </div>
 
     <div id="wrap">
-      <input type="text" size="3" id="num1" class="intext11" />
-      <span id="opr"></span>
-      <input type="text" size="3" id="num2" class="intext11" />
-
-      <span id="res"></span>
-
-      <!-- text input -->
+      <span>값을 입력하세요</span>
       <div class="box2">
         <input tpye="text" id="intext2" />
       </div>
-
+      <script src="main.js"></script>
       <!-- button -->
       <div class="box2">
         <button class="btn" onclick="Answer()">확인해보기</button>
         <button class="btn" onclick="re()">다시하기</button>
       </div>
     </div>
+    <p>정답확인</p>
     <div class="show-anwser"><span id="ans"></span></div>
-    <script src="main.js"></script>
   </body>
 </html>

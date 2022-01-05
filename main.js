@@ -2,6 +2,8 @@ let num1;
 let num2;
 let opr = document.querySelector("#opr");
 let res = document.querySelector("#res");
+let intext2 = document.querySelector("#intext2");
+const re = document.getElementById("intext2");
 
 function fnPlus() {
   num1 = Number(document.querySelector("#num1").value);
@@ -48,10 +50,18 @@ function fnDiv() {
   opr.innerText = "/";
   res.innerText = num1 / num2;
 
-  if (isNaN(num1 * num2)) {
+  if (isNaN(num1 / num2)) {
     alert("숫자만 입력해주세요");
     res.innerText = "";
     opr.innerText = "";
+  }
+}
+
+function fn() {
+  fake = Number(document.querySelector("#intext2").value);
+
+  if (isNaN(fake)) {
+    alert("숫자만 입력해주세요");
   }
 }
 
@@ -75,9 +85,6 @@ input.addEventListener("keyup", (event) => {
   }
 });
 
-function re() {
-  const re = document.getElementById("intext2");
-  const re2 = document.getElementById("ans");
-  re.value = null;
-  re2.value = null;
-}
+// function re() {
+//   re.value = null;
+// }

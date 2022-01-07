@@ -1,5 +1,6 @@
 let n1 = Math.floor(Math.random() * 100, 10);
 let n2 = Math.floor(Math.random() * 100, 10);
+const audio = document.getElementById("myAudio");
 
 document.getElementById("intext").value = n1;
 document.getElementById("intext1").value = n2;
@@ -11,14 +12,30 @@ function Game() {
 
   if (user == adds) {
     document.getElementById("ans").innerHTML = "정답입니다!";
+    var audio1 = new Audio("right.mp3");
+    audio1.loop = false; // 반복재생하지 않음
+    audio1.volume = 0.5; // 음량 설정
+    audio1.play(); // sound1.mp3 재생
+
     document.getElementById("ans").style.color = "blue";
+    document.getElementById("Canvas").style.display = "block";
     setTimeout(function () {
       document.getElementById("ans").innerHTML = "";
     }, 1000);
+    setTimeout(function () {
+      document.getElementById("Canvas").style.display = "none";
+    }, 5000);
   } else {
     document.getElementById("ans").innerHTML =
       "정답은 " + adds + " 다시해보세요";
+    var audio1 = new Audio("wrong.mp3");
+    audio1.loop = false; // 반복재생하지 않음
+    audio1.volume = 0.5; // 음량 설정
+    audio1.play(); // sound1.mp3 재생
+
     document.getElementById("ans").style.color = "red";
+    document.getElementById("Canvas").style.display = "none";
+
     setTimeout(function () {
       document.getElementById("ans").innerHTML = "";
     }, 1000);

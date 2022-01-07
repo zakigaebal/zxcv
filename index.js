@@ -13,7 +13,12 @@ function Game() {
 
   if (user == adds) {
     document.getElementById("ans").innerHTML = "정답입니다!";
-
+    fetch("https://source.unsplash.com/300x200?random/")
+    .then((response)=>{
+      console.log(response)
+      document.getElementById("image").src =response.url;
+    })
+    
     var audio1 = new Audio("sound/right.mp3");
     audio1.loop = false; // 반복재생하지 않음
     audio1.volume = 0.5; // 음량 설정

@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap");
-
 #two {
   display: none;
 }
@@ -47,15 +45,18 @@ canvas {
 }
 
 header {
-  background: #fe4a49;
+  background: #61948b;
 }
 
 .nav {
   overflow: hidden;
-  background: #fe4a49;
+  padding: 5px;
+  margin-left: 15px;
+  margin-right: 15px;
+
   color: #fff;
   padding: 20px 0;
-  display: none;
+  display: block;
 }
 
 .nav h2 {

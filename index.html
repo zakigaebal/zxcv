@@ -9,9 +9,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <title>수학 퀴즈</title>
-    
-
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <!-- Css Link -->
     <link rel="stylesheet" href="css/style.css" />
   </head>
@@ -40,49 +38,16 @@
   
       <div class="main">
         <!-- Heading -->
-        <h1>두 자리 <span> 사칙연산공부하기</span></h1>
+        <h1>사칙연산 <span>연습문제</span></h1>
         <!-- text input -->
-
-        <p>연산을 선택하세요</p>
-        <div id="moem">
-          <button
-            class="op"
-            type="button"
-            onclick="location.href='index.html' "
-          >
-            +
-          </button>
-          <button
-            class="op"
-            type="button"
-            onclick="location.href='subtract.html' "
-          >
-            -
-          </button>
-          <button
-            class="op"
-            type="button"
-            onclick="location.href='multiply.html' "
-          >
-            X
-          </button>
-          <button
-            class="op"
-            type="button"
-            onclick="location.href='divide.html' "
-          >
-            /
-          </button>
-        </div>
-        <br />
-        <br />
-        <br />
-
-        <h2>문제</h2>
+         
+        
+       
         <div id="center">
           <div class="box-col">
             <input type="textf" id="intext" class="intext11" readonly />
           </div>
+          
 
           <div class="add-s">
             <p class="bigsize">+</p>
@@ -94,13 +59,17 @@
         </div>
 
         <!-- Main Box -->
+        
         <div class="main-box">
+          
           <!-- <div class="show-anwser"></span></div> -->
           <div id="wrap">
-            <span>값을 입력하세요</span>
+           
             <!-- text input -->
             <div class="box2">
+              <span>값을 입력하세요</span>
               <input tpye="text" id="intext2" />
+              <div class="show-anwser"><span id="ans"></span></div>
             </div>
 
             <!-- button -->
@@ -109,14 +78,55 @@
               <button id="random" class="btn" onclick="generate_equation()">
                 숫자돌리기
               </button>
+             
+              
             </div>
           </div>
         </div>
-        <p>정답확인</p>
-        <div class="show-anwser"><span id="ans"></span></div>
+       
       
    
 
+  
+    
+   
+  
+    <div id="moem">
+      <p>공부할 연산을 선택하세요</p>
+      <button
+        class="op"
+        type="button"
+        onclick="location.href='index.html' "
+      >
+        +
+      </button>
+      <button
+        class="op"
+        type="button"
+        onclick="location.href='subtract.html' "
+      >
+        -
+      </button>
+      <button
+        class="op"
+        type="button"
+        onclick="location.href='multiply.html' "
+      >
+        X
+      </button>
+      <button
+        class="op"
+        type="button"
+        onclick="location.href='divide.html' "
+      >
+      ÷
+      </button>
+    </div>
+   <br />
+   <br />
+    <div id="board">
+      <img id="image" src="https://source.unsplash.com/300x200?random/">
+    </div>
     <script src="index.js"></script>
     <script src="event.js"></script>
   </body>

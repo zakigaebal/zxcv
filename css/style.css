@@ -1,16 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap");
 
+#image {
+  width: 300px;
+  height: 200px;
+}
+
 * {
   padding: 0;
   margin: 0;
-}
-
-#moem {
-  width: 400px;
-  margin: 0px auto;
-  text-align: center;
-  background-color: rgb(202, 162, 162);
-  border-radius: 50px;
 }
 
 #random {
@@ -54,6 +51,7 @@ header {
   background: #fe4a49;
   color: #fff;
   padding: 20px 0;
+  display: none;
 }
 
 .nav h2 {
@@ -190,14 +188,27 @@ input {
 }
 
 #intext2 {
-  width: 180px;
-  height: 35px;
   margin: 30px 0px;
   padding: 0px 15px;
   text-align: center;
   font-size: 20px;
   font-weight: 600;
-  border: none;
+  border-color: rgb(0, 0, 0);
+
+  border-style: solid;
+  border-width: 5px;
+}
+
+#dintext2 {
+  margin: 30px 0px;
+  padding: 0px 15px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  border-color: rgb(0, 0, 0);
+
+  border-style: solid;
+  border-width: 5px;
 }
 
 h1 span {
@@ -246,7 +257,7 @@ span {
   width: 400px;
   margin: 50px auto;
   text-align: center;
-  background-color: rgb(238, 214, 214);
+  background-color: rgb(10, 219, 104);
   border-radius: 50px;
   display: flex;
   flex-direction: column;
@@ -297,17 +308,6 @@ input {
   display: flex;
 }
 
-#intext2 {
-  width: 300px;
-  height: 35px;
-  margin: 10px 0px;
-  padding: 0px 15px;
-  text-align: center;
-  font-size: 20px;
-  font-weight: 600;
-  border: none;
-}
-
 .btn {
   padding: 8px 20px;
   border: none;
@@ -318,10 +318,23 @@ input {
 }
 
 header {
-  display: none;
+  display: block;
 }
 
 .intext11 {
+  width: 100px;
+  height: 80px;
+  margin: 5px;
+  font-size: 20px;
+  font-weight: 600;
+  height: 55px;
+  padding: 0px 10px;
+  text-align: center;
+  border: none;
+  background: #fff;
+  border-radius: 5px;
+}
+.dintext11 {
   width: 100px;
   height: 80px;
   margin: 5px;
@@ -351,8 +364,9 @@ header {
   width: 400px;
   margin: 0px auto;
   text-align: center;
-  background-color: rgb(202, 162, 162);
+
   border-radius: 50px;
+  display: block;
 }
 
 #opr {
@@ -372,7 +386,7 @@ header {
 .show-anwser {
   width: 100%;
   height: 55px;
-  background: #f8f8f8;
+  background: #f8d3e7;
   margin: 0px 0px 60px 0px;
 
   display: flex;

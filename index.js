@@ -55,3 +55,58 @@ function Game() {
     var user = (document.getElementById("intext2").value = "");
   }
 }
+let dn1 = Math.floor(Math.random() * 100, 10);
+let dn2 = Math.floor(Math.random() * 100, 10);
+
+document.getElementById("dintext").value = dn1;
+document.getElementById("dintext1").value = dn2;
+
+let addsd = dn1 + dn2;
+
+function Game2() {
+  var douser = document.getElementById("dintext2").value;
+
+  if (douser == addsd) {
+    document.getElementById("dans").innerHTML = "정답입니다!";
+
+    var audio1 = new Audio("sound/right.mp3");
+    audio1.loop = false; // 반복재생하지 않음
+    audio1.volume = 0.5; // 음량 설정
+    audio1.play(); // sound1.mp3 재생
+
+    document.getElementById("dans").style.color = "blue";
+    document.getElementById("Canvas").style.display = "block";
+    setTimeout(function () {
+      document.getElementById("dans").innerHTML = "";
+    }, 1000);
+    setTimeout(function () {
+      document.getElementById("Canvas").style.display = "none";
+    }, 5000);
+  } else {
+    document.getElementById("dans").innerHTML =
+      "정답은 " + addsd + " 다시해보세요";
+    var audio1 = new Audio("sound/wrong.mp3");
+    audio1.loop = false; // 반복재생하지 않음
+    audio1.volume = 0.5; // 음량 설정
+    audio1.play(); // sound1.mp3 재생
+
+    document.getElementById("dans").style.color = "red";
+    document.getElementById("Canvas").style.display = "none";
+
+    setTimeout(function () {
+      document.getElementById("dans").innerHTML = "";
+    }, 1000);
+  }
+
+  if (douser == addsd) {
+    var douser = (document.getElementById("dintext2").value = "");
+    dn1 = Math.floor(Math.random() * 100, 10);
+    n2 = Math.floor(Math.random() * 100, 10);
+    document.getElementById("dintext").value = dn1;
+    document.getElementById("dintext1").value = dn2;
+
+    addsd = dn1 + n2;
+  } else {
+    var douser = (document.getElementById("dintext2").value = "");
+  }
+}

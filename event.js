@@ -1,7 +1,24 @@
+function doc1() {
+  document.getElementById("one").style.display = "block";
+  document.getElementById("two").style.display = "none";
+}
+
+function doc2() {
+  document.getElementById("one").style.display = "none";
+  document.getElementById("two").style.display = "block";
+}
+
 const input = document.getElementById("intext2");
 input.addEventListener("keyup", (event) => {
   if (event.keyCode === 13) {
     Game();
+  }
+});
+
+const dinput = document.getElementById("dintext2");
+dinput.addEventListener("keyup", (event) => {
+  if (event.keyCode === 13) {
+    Game2();
   }
 });
 

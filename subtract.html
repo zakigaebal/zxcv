@@ -9,8 +9,6 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <title>수학 퀴즈</title>
-    
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <!-- Css Link -->
     <link rel="stylesheet" href="css/style.css" />
@@ -19,6 +17,7 @@
     <canvas id="Canvas"></canvas>
    
     <header>
+
 
         <div class="nav">
           <h2>
@@ -41,12 +40,20 @@
       <div class="main">
         <!-- Heading -->
         <h1>사칙연산 <span>연습문제</span></h1>
+        <p>공부할 자릿수를 선택하세요</p>
+
+        <div class="box2">
+          <button class="btn" onclick="doc1()">한자리</button>
+          <button class="btn" onclick="doc2()">두자리</button>
+</div>
+
         <!-- text input -->
          
         
-       
+       <div id="one">
         <div id="center">
           <div class="box-col">
+            
             <input type="textf" id="intext" class="intext11" readonly />
           </div>
           
@@ -58,31 +65,60 @@
           <div class="box-col">
             <input type="textf" id="intext1" class="intext11" readonly />
           </div>
+          
         </div>
-
+        <div class="box2">
+            
+          <input tpye="text" id="intext2" placeholder="답을 입력해주세요" />
+          <div class="show-anwser"><span id="ans"></span></div>
+          <div class="box2">
+            <button class="btn" onclick="Game()">확인하기</button>
+          </div>
+        </div>
         <!-- Main Box -->
-        
+      </div>
+
+      <div id="two">
+        <div id="center">
+          <div class="box-col">
+            <input type="textf" id="dintext" class="intext11" readonly />
+          </div>
+          
+
+          <div class="add-s">
+            <p class="bigsize">-</p>
+          </div>
+
+          <div class="box-col">
+            <input type="textf" id="dintext1" class="intext11" readonly />
+          </div>
+          
+        </div>
+        <div class="box2">
+            
+          <input tpye="text" id="dintext2" placeholder="답을 입력해주세요" />
+          <div class="show-anwser"><span id="dans"></span></div>
+          <div class="box2">
+            <button class="btn" onclick="Game2()">확인하기</button>
+          </div>
+         
+        </div>
+        <!-- Main Box -->
+      </div>
+
+
+
+
         <div class="main-box">
           
           <!-- <div class="show-anwser"></span></div> -->
           <div id="wrap">
            
             <!-- text input -->
-            <div class="box2">
-              <span>값을 입력하세요</span>
-              <input tpye="text" id="intext2" />
-              <div class="show-anwser"><span id="ans"></span></div>
-            </div>
+           
 
             <!-- button -->
-            <div class="box2">
-              <button class="btn" onclick="Game()">확인해보기</button>
-              <button id="random" class="btn" onclick="generate_equation()">
-                숫자돌리기
-              </button>
-             
-              
-            </div>
+           
           </div>
         </div>
        
@@ -94,6 +130,9 @@
    
   
     <div id="moem">
+        <button id="random" class="btn" onclick="generate_equation()">
+                숫자돌리기
+              </button>
       <p>공부할 연산을 선택하세요</p>
       <button
         class="op"
